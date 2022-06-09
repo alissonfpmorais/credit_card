@@ -121,7 +121,7 @@ defmodule PlasticCard.Type do
   end
 
   @spec card_type(list(Type.t()), String.t()) :: {:ok, Type.t()} | {:error, :invalid_type}
-  def card_type(types, card_number) do
+  def card_type(types \\ Type.card_types(), card_number) do
     card_number = Utils.normalize_text(card_number)
 
     types
