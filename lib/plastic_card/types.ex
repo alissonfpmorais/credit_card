@@ -134,7 +134,7 @@ defmodule PlasticCard.Type do
   end
 
   @spec fetch_by_brand(list(Type.t()), atom()) :: {:ok, Type.t()} | {:error, :not_found}
-  def fetch_by_brand(types, brand) when is_list(types) and is_atom(brand) do
+  def fetch_by_brand(types \\ Type.card_types(), brand) when is_list(types) and is_atom(brand) do
     types
     |> Enum.find(fn %Type{brand: brand_type} -> brand_type == brand end)
     |> case do
