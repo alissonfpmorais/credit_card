@@ -9,7 +9,7 @@ The package can be installed by adding `plastic_card` to your list of dependenci
 ```elixir
 def deps do
   [
-    {:plastic_card, "~> 0.4.2"}
+    {:plastic_card, "~> 0.4.3"}
   ]
 end
 ```
