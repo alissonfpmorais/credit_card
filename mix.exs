@@ -32,7 +32,6 @@ defmodule PlasticCard.MixProject do
 
   defp package do
     [
-      name: "plastic_card",
       licenses: ["MIT"],
       links: %{"GitHub" => "https://github.com/alissonfpmorais/plastic_card"}
     ]
