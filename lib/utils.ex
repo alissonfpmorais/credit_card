@@ -1,4 +1,4 @@
-defmodule CreditCard.Utils do
+defmodule PlasticCard.Utils do
   @moduledoc false
 
   def normalize_text(text) do

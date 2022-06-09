@@ -1,8 +1,8 @@
-defmodule CreditCardTest do
+defmodule PlasticCardTest do
   @moduledoc false
 
   use ExUnit.Case
-  doctest CreditCard
+  doctest PlasticCard
 
   describe "from_raw/5" do
     test "valid input should work successfully" do
@@ -11,8 +11,8 @@ defmodule CreditCardTest do
       expiration_date = "01/30"
       security_code = "123"
 
-      assert {:ok, %CreditCard{}} =
-               CreditCard.from_raw(card_number, full_name, expiration_date, security_code)
+      assert {:ok, %PlasticCard{}} =
+               PlasticCard.from_raw(card_number, full_name, expiration_date, security_code)
     end
   end
 end

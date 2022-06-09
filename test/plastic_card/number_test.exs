@@ -1,8 +1,8 @@
-defmodule CreditCard.NumberTest do
+defmodule PlasticCard.NumberTest do
   @moduledoc false
 
   use ExUnit.Case
-  alias CreditCard.{Number, Type}
+  alias PlasticCard.{Number, Type}
 
   doctest Number
 

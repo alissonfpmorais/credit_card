@@ -1,8 +1,8 @@
-defmodule CreditCard.HolderTest do
+defmodule PlasticCard.HolderTest do
   @moduledoc false
 
   use ExUnit.Case
-  alias CreditCard.Holder
+  alias PlasticCard.Holder
 
   doctest Holder
 

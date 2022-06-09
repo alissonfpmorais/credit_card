@@ -1,8 +1,8 @@
-defmodule CreditCard.SecurityCodeTest do
+defmodule PlasticCard.SecurityCodeTest do
   @moduledoc false
 
   use ExUnit.Case
-  alias CreditCard.{SecurityCode, Type}
+  alias PlasticCard.{SecurityCode, Type}
 
   doctest SecurityCode
 

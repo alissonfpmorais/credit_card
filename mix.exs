@@ -1,15 +1,15 @@
-defmodule CreditCard.MixProject do
+defmodule PlasticCard.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :credit_card,
-      version: "0.3.1",
+      app: :plastic_card,
+      version: "0.4.0",
       elixir: "~> 1.13",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
-      description: "This project aims to help with credit card validation and utilities",
-      source_url: "https://github.com/alissonfpmorais/credit_card",
+      description: "This project aims to help with plastic card validation and utilities",
+      source_url: "https://github.com/alissonfpmorais/plastic_card",
       package: package()
     ]
   end
@@ -32,9 +32,9 @@ defmodule CreditCard.MixProject do
 
   defp package do
     [
-      name: "credit_card_utils",
+      name: "plastic_card",
       licenses: ["MIT"],
-      links: %{"GitHub" => "https://github.com/alissonfpmorais/credit_card"}
+      links: %{"GitHub" => "https://github.com/alissonfpmorais/plastic_card"}
     ]
   end
 end

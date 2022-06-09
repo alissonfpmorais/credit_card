@@ -1,7 +1,7 @@
-defmodule CreditCard do
+defmodule PlasticCard do
   @moduledoc false
 
-  alias CreditCard.{ExpirationDate, Holder, Number, SecurityCode, Type}
+  alias PlasticCard.{ExpirationDate, Holder, Number, SecurityCode, Type}
 
   defstruct [:number, :holder_name, :expiration_date, :security_code, :type]
 
@@ -22,7 +22,7 @@ defmodule CreditCard do
   ]
 
   @spec from_raw(String.t(), String.t(), String.t(), String.t(), Keyword.t()) ::
-          {:ok, CreditCard.t()} | {:error, term()}
+          {:ok, PlasticCard.t()} | {:error, term()}
   def from_raw(card_number, full_name, expiration_date, security_code, opts \\ [])
       when is_binary(card_number) and
              is_binary(full_name) and
@@ -46,26 +46,36 @@ defmodule CreditCard do
     end
   end
 
-  def card_number(%CreditCard{number: %Number{number: number}}), do: number
+  @spec card_number(PlasticCard.t()) :: String.t()
+  def card_number(%PlasticCard{number: %Number{number: number}}), do: number
 
-  def holder_name(%CreditCard{holder_name: %Holder{holder_name: holder_name}}),
+  @spec holder_name(PlasticCard.t()) :: String.t()
+  def holder_name(%PlasticCard{holder_name: %Holder{holder_name: holder_name}}),
     do: holder_name
 
-  def holder_first_name(%CreditCard{holder_name: %Holder{first_name: first_name}}), do: first_name
+  @spec holder_first_name(PlasticCard.t()) :: String.t()
+  def holder_first_name(%PlasticCard{holder_name: %Holder{first_name: first_name}}),
+    do: first_name
 
-  def holder_last_name(%CreditCard{holder_name: %Holder{last_name: last_name}}), do: last_name
+  @spec holder_last_name(PlasticCard.t()) :: String.t()
+  def holder_last_name(%PlasticCard{holder_name: %Holder{last_name: last_name}}), do: last_name
 
-  def expiration_date(%CreditCard{expiration_date: %ExpirationDate{normalized: normalized}}),
+  @spec expiration_date(PlasticCard.t()) :: String.t()
+  def expiration_date(%PlasticCard{expiration_date: %ExpirationDate{normalized: normalized}}),
     do: normalized
 
-  def expiration_month(%CreditCard{expiration_date: %ExpirationDate{month: month}}),
+  @spec expiration_month(PlasticCard.t()) :: String.t()
+  def expiration_month(%PlasticCard{expiration_date: %ExpirationDate{month: month}}),
     do: month
 
-  def expiration_year(%CreditCard{expiration_date: %ExpirationDate{year: year}}),
+  @spec expiration_year(PlasticCard.t()) :: String.t()
+  def expiration_year(%PlasticCard{expiration_date: %ExpirationDate{year: year}}),
     do: year
 
-  def security_code(%CreditCard{security_code: %SecurityCode{security_code: security_code}}),
+  @spec security_code(PlasticCard.t()) :: String.t()
+  def security_code(%PlasticCard{security_code: %SecurityCode{security_code: security_code}}),
     do: security_code
 
-  def type(%CreditCard{type: type}), do: type
+  @spec type(PlasticCard.t()) :: Type.t()
+  def type(%PlasticCard{type: type}), do: type
 end

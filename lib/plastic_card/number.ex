@@ -1,7 +1,7 @@
-defmodule CreditCard.Number do
+defmodule PlasticCard.Number do
   @moduledoc false
 
-  alias CreditCard.{Number, Type, Utils}
+  alias PlasticCard.{Number, Type, Utils}
 
   defstruct [:number]
 

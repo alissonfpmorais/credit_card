@@ -1,7 +1,7 @@
-defmodule CreditCard.SecurityCode do
+defmodule PlasticCard.SecurityCode do
   @moduledoc false
 
-  alias CreditCard.{SecurityCode, Type}
+  alias PlasticCard.{SecurityCode, Type}
 
   defstruct [:security_code]
 

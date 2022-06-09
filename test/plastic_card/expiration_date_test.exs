@@ -1,8 +1,8 @@
-defmodule CreditCard.ExpirationDateTest do
+defmodule PlasticCard.ExpirationDateTest do
   @moduledoc false
 
   use ExUnit.Case
-  alias CreditCard.ExpirationDate
+  alias PlasticCard.ExpirationDate
 
   doctest ExpirationDate
 

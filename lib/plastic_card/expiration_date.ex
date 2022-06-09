@@ -1,7 +1,7 @@
-defmodule CreditCard.ExpirationDate do
+defmodule PlasticCard.ExpirationDate do
   @moduledoc false
 
-  alias CreditCard.{ExpirationDate, Utils}
+  alias PlasticCard.{ExpirationDate, Utils}
 
   defstruct [
     :month,

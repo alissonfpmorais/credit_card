@@ -1,7 +1,7 @@
-defmodule CreditCard.Holder do
+defmodule PlasticCard.Holder do
   @moduledoc false
 
-  alias CreditCard.Holder
+  alias PlasticCard.Holder
 
   defstruct [:first_name, :last_name, :holder_name]
 
