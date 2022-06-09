@@ -1,7 +1,7 @@
 defmodule PlasticCard.Type do
   @moduledoc false
 
-  alias PlasticCard.Type
+  alias PlasticCard.{Type, Utils}
 
   defstruct [
     :name,
@@ -122,6 +122,8 @@ defmodule PlasticCard.Type do
 
   @spec card_type(list(Type.t()), String.t()) :: {:ok, Type.t()} | {:error, :invalid_type}
   def card_type(types, card_number) do
+    card_number = Utils.normalize_text(card_number)
+
     types
     |> Enum.filter(fn %Type{pattern: pattern} -> String.match?(card_number, pattern) end)
     |> Enum.at(0)
