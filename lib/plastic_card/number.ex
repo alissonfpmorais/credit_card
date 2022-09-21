@@ -30,6 +30,20 @@ defmodule PlasticCard.Number do
     end
   end
 
+  @spec bin(Number.t()) :: String.t()
+  def bin(%__MODULE__{number: card_number}) do
+    card_number
+    |> String.split_at(6)
+    |> elem(0)
+  end
+
+  @spec last_4_digits(Number.t()) :: String.t()
+  def last_4_digits(%__MODULE__{number: card_number}) do
+    card_number
+    |> String.split_at(-4)
+    |> elem(1)
+  end
+
   defp valid_luhn?(card_number) do
     case Luhn.valid?(card_number) do
       true -> {:ok, card_number}

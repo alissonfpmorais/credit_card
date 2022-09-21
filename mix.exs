@@ -4,7 +4,7 @@ defmodule PlasticCard.MixProject do
   def project do
     [
       app: :plastic_card,
-      version: "0.4.3",
+      version: "0.5.0",
       elixir: "~> 1.13",
       start_permanent: Mix.env() == :prod,
       deps: deps(),

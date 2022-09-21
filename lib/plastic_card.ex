@@ -49,6 +49,12 @@ defmodule PlasticCard do
   @spec card_number(PlasticCard.t()) :: String.t()
   def card_number(%PlasticCard{number: %Number{number: number}}), do: number
 
+  @spec bin(PlasticCard.t()) :: String.t()
+  def bin(%PlasticCard{number: number}), do: Number.bin(number)
+
+  @spec last_4_digits(PlasticCard.t()) :: String.t()
+  def last_4_digits(%PlasticCard{number: number}), do: Number.last_4_digits(number)
+
   @spec holder_name(PlasticCard.t()) :: String.t()
   def holder_name(%PlasticCard{holder_name: %Holder{holder_name: holder_name}}),
     do: holder_name
