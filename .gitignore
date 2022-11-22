@@ -27,3 +27,6 @@ plastic_card-*.tar
 
 # IDE files
 .elixir_ls/
+
+# IEx shell
+.iex.exs
