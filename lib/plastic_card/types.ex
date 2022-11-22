@@ -55,7 +55,7 @@ defmodule PlasticCard.Type do
       "CVV",
       3,
       ~w(6362970000457013)
-       )
+    )
     |> append(
       "JCB",
       :jcb,
