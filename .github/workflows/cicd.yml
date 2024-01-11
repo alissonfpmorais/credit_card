@@ -10,8 +10,8 @@ on:
 name: Format, Test and Deploy
 
 env:
-  OTP_VERSION: "23.3"
-  ELIXIR_VERSION: "1.13.3"
+  OTP_VERSION: "25.0.4"
+  ELIXIR_VERSION: "1.14.2"
   HEX_API_KEY: ${{ secrets.HEX_API_KEY }}
 
 jobs:
